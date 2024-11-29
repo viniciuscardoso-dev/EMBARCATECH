@@ -16,4 +16,5 @@ fórmula para calcular o delta(a,b,c)
 
 delta
 
-
+Exemplo 2:
+Calcular a área de uma circunferência ( área = PI*R²) .
