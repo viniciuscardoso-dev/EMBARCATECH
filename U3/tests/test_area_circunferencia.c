@@ -9,11 +9,11 @@ void test_area_valida() {
 }
 
 void test_raio_zero() {
-	TEST_ASSERT_DOUBLE_WITHIN(0.0, calcular_area_circunferencia(0.0));
+	TEST_ASSERT_EQUAL_DOUBLE(0.0, calcular_area_circunferencia(0.0));
 }
 
 void test_raio_negativo() {
-	TEST_ASSERT_DOUBLE_WITHIN(-1.0, calcular_area_circunferencia(-3.0));
+	TEST_ASSERT_EQUAL_DOUBLE(-1.0, calcular_area_circunferencia(-3.0));
 }
 
 int main() {
