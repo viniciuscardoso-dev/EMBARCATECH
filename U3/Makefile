@@ -1,13 +1,26 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c99 -DUNITY_INCLUDE_DOUBLE -I$(SRC_DIR)
 TEST_DIR = tests
 SRC_DIR = src
 UNITY_DIR = $(TEST_DIR)/unity
+BUILD_DIR = build
+UNITY_FILES = $(wildcard $(UNITY_DIR)/*.c)
+TEST_SOURCES = $(wildcard $(TEST_DIR)/test_*.c)
+TEST_BINS = $(patsubst $(TEST_DIR)/test_%.c, $(BUILD_DIR)/test_%, $(TEST_SOURCES))
 
-all: test
+all: setup $(TEST_BINS)
 
-test:
-	gcc -Wall -Wextra -std=c99 -DUNITY_INCLUDE_DOUBLE tests/test_delta.c src/delta.c tests/unity/unity.c -o test_delta
+$(BUILD_DIR)/test_%: $(TEST_DIR)/test_%.c $(SRC_DIR)/%.c $(UNITY_FILES)
+	$(CC) $(CFLAGS) $^ -o $@
+
+setup:
+	mkdir -p $(BUILD_DIR)
+
+test: all
+	@for test_bin in $(TEST_BINS); do \
+		echo "Running $$test_bin..."; \
+		$$test_bin; \
+	done
 
 clean:
-	rm -f test_delta
+	rm -rf $(BUILD_DIR)
