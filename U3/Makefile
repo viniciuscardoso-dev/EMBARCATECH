@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -DUNITY_INCLUDE_DOUBLE -I$(SRC_DIR)
+CFLAGS = -Wall -Wextra -std=c99 -DUNITY_INCLUDE_DOUBLE -I$(SRC_DIR) -D_XOPEN_SOURCE=600 -lm
 TEST_DIR = tests
 SRC_DIR = src
 UNITY_DIR = $(TEST_DIR)/unity
