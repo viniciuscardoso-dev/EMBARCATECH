@@ -7,7 +7,7 @@ UNITY_DIR = $(TEST_DIR)/unity
 all: test
 
 test:
-	$(CC) $(CFLAGS) $(TEST_DIR)/test_delta.c $(SRC_DIR)/delta.c $(UNITY_DIR)/unity.c -o test_delta ./test_delta
+	gcc -Wall -Wextra -std=c99 -DUNITY_INCLUDE_DOUBLE tests/test_delta.c src/delta.c tests/unity/unity.c -o test_delta
 
 clean:
 	rm -f test_delta
