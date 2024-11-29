@@ -2,5 +2,8 @@
 #include <math.h>
 
 double calcular_area_circunferencia(double raio) {
-	return raio;
+	if (raio < 0) {
+		return -1;
+	}
+	return raio * raio * M_PI;
 }
