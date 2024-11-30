@@ -6,11 +6,11 @@ int main() {
 	printf("Digite o primeiro número: ");
 	scanf("%d", &a);
 	printf("Digite o segundo número: ");
-	scanf("%d", &p);
+	scanf("%d", &b);
 
 	for (int i = 1; i <= b; i++) {
 		pow = pow * a;
 	}
 
-	printf("%d", a);
+	printf("%d", pow);
 }
