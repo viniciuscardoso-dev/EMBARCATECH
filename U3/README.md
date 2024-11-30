@@ -18,3 +18,6 @@ delta
 
 Exemplo 2:
 Calcular a área de uma circunferência ( área = PI*R²) .
+
+Tarefa:
+"Faça um programa que leia um numero inteiro positivo de três dígitos (de 100 a 999). Gere outro numero formado pelos dígitos invertidos do numero lido. Exemplo: número lido: 123 e o resultado invertido deve ser 321."
