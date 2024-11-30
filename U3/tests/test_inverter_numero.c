@@ -13,6 +13,7 @@ void test_inverter_numero_valido(void) {
 void test_inverter_numero_fora_do_intervalo(void) {
 	TEST_ASSERT_EQUAL_INT(-1, inverter_numero(99));
 	TEST_ASSERT_EQUAL_INT(-1, inverter_numero(1000));
+	TEST_ASSERT_EQUAL_INT(-1, inverter_numero(-100));
 }
 
 int main(void) {
