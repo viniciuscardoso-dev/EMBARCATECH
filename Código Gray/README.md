@@ -1,0 +1,1 @@
+Hoje estava lendo o livro "Programação de sistemas embarcados" e me deparei com o Código Gray, achei interessante como podemos ordenar os valores alterando apenas um dígito, então decidi criar uma representação simplória utilizando arduino.
