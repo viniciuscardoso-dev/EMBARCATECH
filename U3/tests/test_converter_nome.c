@@ -1,6 +1,6 @@
 #include <string.h>
 #include <stdlib.h>
-#include "../src/converter_nome.h"
+#include "converter_nome.h"
 #include "unity/unity.h"
 
 void setUp() {}
